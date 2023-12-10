@@ -1,0 +1,258 @@
+.crearUsuario{
+    display: flex; 
+    align-items: center;
+    padding: 30px ;
+    text-align: left;
+    height: 50px;
+    width: 300px;
+}
+.crearUsuario  div{
+    margin-right: 30px;
+}
+.crearUsuario button{
+    height: 30px;
+    width: 150px;
+    border: none;
+    background-color: #38A901;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.container_Table{
+    padding: 50px;
+}
+.container_Table table{
+    border-collapse: collapse;
+    margin: 0;
+    padding: 30px;
+    table-layout: fixed;
+}
+
+.container_Table table thead {
+    background-color: #38A901;
+    border: 1px solid #ddd;
+    color: #fff;
+    padding: 4px;
+}
+
+.container_Table table th{
+    padding: 16px;
+    text-align: center;
+    font-size: .85em;
+    border-bottom: #38A901 1px solid;
+}
+
+.users-table--edit{
+    background: #009688;
+    padding: 6px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.users-table--delete{
+    background: #b11e1e;
+    padding: 6px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+.modal-actualizar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+}
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.form{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 30px;
+    margin: auto;
+}
+
+.modalClose{
+    position: absolute;
+    right: 10px;
+}
+.modalClose i{
+    height: 20px;
+    width: 20px;
+}
+.container .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 3px;
+    width: 50px;
+    background-color: #669801;
+    border-radius: 25px;
+}
+
+.form .input-field{
+    position: relative;
+    height: 30px;
+    width: 100%;
+    margin-top: 25px;
+}
+#massage{
+    position: absolute;
+    color: #333;
+    padding-bottom: 10px;
+    font-size: 13px;
+    display: none;
+}
+
+.input-field input, .input-field select{
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+}
+.input-field select option{
+    color: #999;
+}
+
+.input-field input:is(:focus, :valid), .input-field select:is(:focus, :valid){
+    border-bottom-color:#669801;
+}
+
+.input-field i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 23px;
+    transition: all .2s ease;
+}
+
+.input-field input:is(:focus, :valid) ~ i, .input-field select:is(:focus, :valid) ~ i{
+    color:#669801;
+}
+
+.input-field i.icon{
+    left: 0;
+}
+
+.input-field i.showHipePw{
+    right: 0;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.form .checkbox-text{
+    margin-top: 20px;
+    align-items: center;
+}
+
+.checkbox-text .checkbox-content{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input{
+    margin: 0 8px -2px 4px;
+    accent-color: #669801;
+}
+
+.form .text{
+    color: #333;
+    font-size: 14px;
+}
+
+.form a{
+    color: #669801;
+    text-decoration: none;
+}
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 35px;
+}
+
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #669801;
+    cursor: pointer;
+}
+.button input:hover{
+    background-color: #5f8d03;
+}
+
+.form .login-signup{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.input-field .tooltip{
+    visibility: hidden;
+    width: 300px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; 
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.input-field:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
+
+.input-field input[type="number"]::-webkit-inner-spin-button,
+.input-field input[type="number"]::-webkit-outer-spin-button,
+.input-field input[type="number"]::-moz-inner-spin-button,
+.input-field input[type="number"]::-moz-outer-spin-button {
+    -webkit-appearance: none;
+}
