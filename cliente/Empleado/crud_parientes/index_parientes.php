@@ -6,6 +6,19 @@
     $sentencia = $bd -> query("select * from parientes");
     $persona = $sentencia->fetchAll(PDO::FETCH_OBJ);
     #print_r($persona);
+    define('PROYECTO_RUTA', '/xampp/htdocs/Proyecto/');
+    include_once PROYECTO_RUTA . 'servidor/conexion.php';
+    session_start();
+    if (!isset($_SESSION['rol'])) {
+        header("Location:  /Proyecto/cliente/Usuario/inicioSesion.php");
+        exit();
+    }else{
+        if($_SESSION['rol'] != 1){
+            header("Location: /Proyecto/cliente/Usuario/inicioSesion.php");
+            exit();
+        }
+    }
+
 ?>
 
 <div class="container mt-5">
@@ -72,7 +85,9 @@
             <?php 
                 }
             ?> 
-
+            <div class="container mt-4">
+                <a href="/Proyecto/cliente/Usuario/inicioSesion.php?cerrar_sesion=true" class="btn btn-primary">Cerrar Sesión</a>
+            </div>
             
             <div class="card">
                 <div class="card-header">
