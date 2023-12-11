@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio Sesion</title>
     <link rel="stylesheet" href="../assets/CSS/estiloInicioSesion.css">
-    <link rel="stylesheet" href="http://localhost/proyectoSena/vistas/assets/plugins/SweetAlert/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="http://localhost/Proyecto/cliente/assets/plugins/SweetAlert/dist/sweetalert2.min.css">
 </head>
 
 <?php
 define('PROYECTO_RUTA', '/xampp/htdocs/proyectoSena/');
-include_once PROYECTO_RUTA . 'controlador/conexion.php';
+include_once PROYECTO_RUTA . 'cliente/conexion.php';
 
 
 #INICIAMOS LA SESION 
@@ -117,16 +117,6 @@ if(isset($_POST["login"])){
 
 
     ?>
-    <br>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesion</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/assets/CSS/estiloInicioSesion.css">
-</head>
 <body>
     <div class="container">
         <div class="forms">
@@ -168,7 +158,6 @@ if(isset($_POST["login"])){
 
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
 <script>
@@ -176,8 +165,8 @@ if(isset($_POST["login"])){
         window.history.replaceState(null,null,window.location.pathname);
     },0)
 </script>
-<script src="http://localhost/proyectoSena/vistas/assets/js/script.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/script.js"></script>
     
-    <script src="http://localhost/proyectoSena/vistas/assets/plugins/SweetAlert/dist/sweetalert2.all.min.js"></script>
+    <script src="http://localhost/Proyecto/cliente/assets/plugins/SweetAlert/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>

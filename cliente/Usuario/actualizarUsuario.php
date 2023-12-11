@@ -7,12 +7,12 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../assets/CSS/estiloform.css">
     <link rel="stylesheet" href="../assets/CSS/estiloNavbar.css">
-    <link rel="stylesheet" href="http://localhost/proyectoSena/vistas/assets/plugins/SweetAlert/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="http://localhost/Proyecto/cliente/assets/plugins/SweetAlert/dist/sweetalert2.min.css">
 </head>
 <body>
 <?php
 define('PROYECTO_RUTA', '/xampp/htdocs/proyectoSena/');
-include_once PROYECTO_RUTA . 'controlador/conexion.php';
+include_once PROYECTO_RUTA . 'cliente/conexion.php';
 ## TRAER EL USUARIO A ACTUALIZAR ##
 if(isset($_GET['idU'])){
     try {
@@ -26,7 +26,7 @@ if(isset($_GET['idU'])){
     }
 }
 function actualizar($identificacion, $tipo, $nombreU, $apellidoU, $correoU, $contraseña, $tipoUsuario){
-    include('/xampp/htdocs/proyectoSena/controlador/conexion.php');
+    include('/xampp/htdocs/proyectoSena/cliente/conexion.php');
     try {
         $sql = "UPDATE usuario SET idUsuario = ?, tipoDocumento = ?, nombreU = ?, apellidoU = ?, correoU = ?, contraseña = ?, codTipoUsuario = ? WHERE idUsuario = ?;";
         $idUsu = $_GET['idU'];
@@ -142,10 +142,10 @@ if(isset($_POST['registrarUA'])){
                 </form>
             </div>
         </section>
-<script src="http://localhost/proyectoSena/vistas/assets/js/modal.js"></script>
-<script src="http://localhost/proyectoSena/vistas/assets/js/sweet.js"></script>
-<script src="http://localhost/proyectoSena/vistas/assets/js/script2.js"></script>
-<script src="http://localhost/proyectoSena/vistas/assets/js/script.js"></script>
-<script src="http://localhost/proyectoSena/vistas/assets/plugins/SweetAlert/dist/sweetalert2.all.min.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/modal.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/sweet.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/script2.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/script.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/plugins/SweetAlert/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>

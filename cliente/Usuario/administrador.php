@@ -7,12 +7,12 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../assets/CSS/estiloNavbar.css">
     <link rel="stylesheet" href="../assets/CSS/estiloform.css">
-    <link rel="stylesheet" href="http://localhost/proyectoSena/vistas/assets/plugins/SweetAlert/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="http://localhost/Proyecto/cliente/assets/plugins/SweetAlert/dist/sweetalert2.min.css">
 </head>
 
 <?php
 define('PROYECTO_RUTA', '/xampp/htdocs/proyectoSena/');
-include_once PROYECTO_RUTA . 'controlador/conexion.php';
+include_once PROYECTO_RUTA . 'servidor/conexion.php';
 session_start();
 if (!isset($_SESSION['rol'])) {
     header("Location: inicioSesion.php");
@@ -38,7 +38,7 @@ if(isset($_GET['id'])){
                         icon: "success",
                         text: "Usuario eliminado Correctamente"
                 }).then(() => {
-                    location.reload(); // Recargar la página después de cerrar la alerta
+                    location.reload(); 
                 });
                 }
 
@@ -324,11 +324,11 @@ if(isset($_POST["registrar"])){
         window.history.replaceState(null,null,window.location.pathname);
     },0)
 </script>
-<script src="http://localhost/proyectoSena/vistas/assets/js/modal.js"></script>
-<script src="http://localhost/proyectoSena/vistas/assets/js/sweet.js"></script>
-<script src="http://localhost/proyectoSena/vistas/assets/js/script2.js"></script>
-<script src="http://localhost/proyectoSena/vistas/assets/js/script.js"></script>
-<script src="http://localhost/proyectoSena/vistas/assets/plugins/SweetAlert/dist/sweetalert2.all.min.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/modal.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/sweet.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/script2.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/script.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/plugins/SweetAlert/dist/sweetalert2.all.min.js"></script>
 
 </body>
 </html>
