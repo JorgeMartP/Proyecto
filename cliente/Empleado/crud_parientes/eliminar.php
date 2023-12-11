@@ -11,9 +11,9 @@
     $resultado = $sentencia->execute([$codigo]);
 
     if ($resultado === TRUE) {
-        header('Location: index.php?mensaje=eliminado');
+        header('Location: index_parientes.php.php?mensaje=eliminado');
     } else {
-        header('Location: index.php?mensaje=error');
+        header('Location: index_parientes.php.php?mensaje=error');
     }
     
 ?>

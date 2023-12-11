@@ -5,7 +5,7 @@
       || empty($_POST["txtCorreo"])|| empty($_POST["fechaNacimiento"]) || empty($_POST["txtParentesco"])
       || empty($_POST["txtTelefono1"]) || empty($_POST["txtIdentificacionEmpleado"]) ){
 
-        header('Location: index.php?mensaje=falta');
+        header('Location: index_parientes.php.php?mensaje=falta');
         exit();
     }
 
@@ -32,9 +32,9 @@
     $correo,$fechaNac,$parentesco,$telefono1,$telefono2,$identificacion_empleado]);
 
     if ($resultado === TRUE) {
-        header('Location: index.php?mensaje=registrado');
+        header('Location: index_parientes.php?mensaje=registrado');
     } else {
-        header('Location: index.php?mensaje=error');
+        header('Location: index_parientes.php.php?mensaje=error');
         exit();
     }
     
