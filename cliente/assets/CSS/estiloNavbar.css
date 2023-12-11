@@ -146,6 +146,15 @@ body{
     left: 10px;
     font-size: 1.2em;
 }
+.search label button{
+    cursor: pointer;
+    position: absolute;
+    top: 24px;
+    left: 0;
+    font-size: 1.2em;
+    background: transparent;
+    border: none;
+}
 .user{
     position: relative;
     width: 40px;

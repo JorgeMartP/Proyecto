@@ -11,8 +11,8 @@
 </head>
 <body>
 <?php
-define('PROYECTO_RUTA', '/xampp/htdocs/proyectoSena/');
-include_once PROYECTO_RUTA . 'cliente/conexion.php';
+define('PROYECTO_RUTA', '/xampp/htdocs/Proyecto/');
+include_once PROYECTO_RUTA . 'servidor/conexion.php';
 ## TRAER EL USUARIO A ACTUALIZAR ##
 if(isset($_GET['idU'])){
     try {
@@ -26,7 +26,7 @@ if(isset($_GET['idU'])){
     }
 }
 function actualizar($identificacion, $tipo, $nombreU, $apellidoU, $correoU, $contraseña, $tipoUsuario){
-    include('/xampp/htdocs/proyectoSena/cliente/conexion.php');
+    include('/xampp/htdocs/Proyecto/servidor/conexion.php');
     try {
         $sql = "UPDATE usuario SET idUsuario = ?, tipoDocumento = ?, nombreU = ?, apellidoU = ?, correoU = ?, contraseña = ?, codTipoUsuario = ? WHERE idUsuario = ?;";
         $idUsu = $_GET['idU'];

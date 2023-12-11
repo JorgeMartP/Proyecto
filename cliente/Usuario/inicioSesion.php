@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio Sesion</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../assets/CSS/estiloInicioSesion.css">
     <link rel="stylesheet" href="http://localhost/Proyecto/cliente/assets/plugins/SweetAlert/dist/sweetalert2.min.css">
 </head>
 
 <?php
-define('PROYECTO_RUTA', '/xampp/htdocs/proyectoSena/');
-include_once PROYECTO_RUTA . 'cliente/conexion.php';
+define('PROYECTO_RUTA', '/xampp/htdocs/Proyecto/');
+include_once PROYECTO_RUTA . 'servidor/conexion.php';
 
 
 #INICIAMOS LA SESION 
@@ -31,7 +32,7 @@ function sesion($sesion){
             header("Location: empleador.php");
             break;
         case 2:
-            header("Location: empleador.php");
+            header("Location: ../Empleado/ConsultaEmpleado.php");
             break;
         case 3:
             header("Location: administrador.php");
@@ -121,7 +122,7 @@ if(isset($_POST["login"])){
     <div class="container">
         <div class="forms">
             <div class="form login">
-                <span class="title">Iniciar Sesion</span>
+                <span class="title">Iniciar Sesión</span>
             
                 <form action="#" method="post">
                     <div class="input-field">
@@ -149,7 +150,7 @@ if(isset($_POST["login"])){
                         </div>
                     </div>
                     <div class="input-field button">
-                        <input type="submit" value="Iniciar Sesion" name="login">
+                        <input type="submit" value="Iniciar Sesión" name="login">
                     </div>
                 </form>
             </div>

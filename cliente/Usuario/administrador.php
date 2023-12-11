@@ -11,7 +11,7 @@
 </head>
 
 <?php
-define('PROYECTO_RUTA', '/xampp/htdocs/proyectoSena/');
+define('PROYECTO_RUTA', '/xampp/htdocs/Proyecto/');
 include_once PROYECTO_RUTA . 'servidor/conexion.php';
 session_start();
 if (!isset($_SESSION['rol'])) {
