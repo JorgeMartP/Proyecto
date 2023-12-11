@@ -2,7 +2,7 @@
 
 <?php
     if(!isset($_GET['codigo'])){
-        header('Location: index.php?mensaje=error');
+        header('Location: index_empleado.php?mensaje=error');
         exit();
     }
 

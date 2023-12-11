@@ -5,7 +5,7 @@
       || empty($_POST["txtTelefono1"])|| empty($_POST["fechaNacimiento"]) || empty($_POST["txtDireccion"])
       || empty($_POST["fechaExpedicion"]) || empty($_POST["txtCorreo1"]) ){
 
-        header('Location: index.php?mensaje=falta');
+        header('Location: index_empleado.php?mensaje=falta');
         exit();
     }
 
@@ -35,9 +35,9 @@
     $telefono,$telefono2,$fechaNac,$direccion,$fechaExp,$correo,$correo2]);
 
     if ($resultado === TRUE) {
-        header('Location: index.php?mensaje=registrado');
+        header('Location: index_empleado.php?mensaje=registrado');
     } else {
-        header('Location: index.php?mensaje=error');
+        header('Location: index_empleado.php?mensaje=error');
         exit();
     }
     

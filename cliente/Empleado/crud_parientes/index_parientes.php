@@ -127,6 +127,10 @@
 
                         </tbody>
                     </table>
+
+                    <div class="container mt-4">
+                    <a href=../crud_empleado/index_empleado.php class="btn btn-primary">Empleado</a>
+                    </div>
                     
                 </div>
             </div>

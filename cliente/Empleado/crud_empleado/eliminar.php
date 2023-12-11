@@ -1,6 +1,6 @@
 <?php 
     if(!isset($_GET['codigo'])){
-        header('Location: index.php?mensaje=error');
+        header('Location: index_empleado.php?mensaje=error');
         exit();
     }
 
@@ -11,9 +11,9 @@
     $resultado = $sentencia->execute([$codigo]);
 
     if ($resultado === TRUE) {
-        header('Location: index.php?mensaje=eliminado');
+        header('Location: index_empleado.php?mensaje=eliminado');
     } else {
-        header('Location: index.php?mensaje=error');
+        header('Location: index_empleado.php?mensaje=error');
     }
     
 ?>

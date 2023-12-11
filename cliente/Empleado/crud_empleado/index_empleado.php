@@ -82,7 +82,8 @@
             </div>
             <?php 
                 }
-            ?>  
+            ?>             
+
 
             
             <div class="card">
@@ -139,10 +140,14 @@
 
                             <?php 
                                 }
-                            ?>
+                            ?>                            
 
                         </tbody>
                     </table>
+
+                    <div class="container mt-4">
+                    <a href=../crud_parientes/index_parientes.php class="btn btn-primary">Parientes</a>
+                    </div>
                     
                 </div>
             </div>

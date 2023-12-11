@@ -1,7 +1,7 @@
 <?php
     print_r($_POST);
     if(!isset($_POST['codigo'])){
-        header('Location: index.php?mensaje=error');
+        header('Location: index_empleado.php?mensaje=error');
     }
 
     include 'conexion/conexion.php';
@@ -31,9 +31,9 @@
     $telefono, $telefono2, $fechaNac, $direccion, $fechaExp, $correo, $correo2, $identif]);
 
     if ($resultado === TRUE) {
-        header('Location: index.php?mensaje=editado');
+        header('Location: index_empleado.php?mensaje=editado');
     } else {
-        header('Location: index.php?mensaje=error');
+        header('Location: index_empleado.php?mensaje=error');
         exit();
     }
     
