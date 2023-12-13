@@ -62,7 +62,7 @@ $departamentos = array(
 ?>
 <?php
 if(isset($_POST['registrar'])){
-    $empresa = 	$_SESSION['empresa'];
+    $empresa = 	$_GET['empresa'];
     $numDocumento = $_POST['numDoc'];
     $tipoDocumento = $_POST['tDocumento'];
     $fechaNacimiento = $_POST['fNacimiento'];
