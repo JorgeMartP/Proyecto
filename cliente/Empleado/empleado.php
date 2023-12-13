@@ -13,17 +13,17 @@
 <?php
 define('PROYECTO_RUTA', '/xampp/htdocs/Proyecto/');
 include_once PROYECTO_RUTA . 'servidor/conexion.php';
-#session_start();
-#if (!isset($_SESSION['rol'])) {
- #   header("Location: ../Usuario/inicioSesion.php");
-  #  exit();
-#}else{
-#    if($_SESSION['rol'] != 2){
-#        header("Location: ../Usuario/inicioSesion.php");
-#        exit();
-#    }
-#}
-$empresa = "";
+session_start();
+if (!isset($_SESSION['rol'])) {
+     header("Location: ../Usuario/inicioSesion.php");
+    exit();
+}else{
+    if($_SESSION['rol'] != 2){
+        header("Location: ../Usuario/inicioSesion.php");
+        exit();
+    }
+}
+$empresa = $_GET['empresa'];
 
 if(isset($_GET['buscar'])){
     try{

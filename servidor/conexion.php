@@ -11,7 +11,7 @@ try{
             
 }catch(Exception $e){
     $conectar="Error en la conexion a la base de datos";
-    echo "Atencion! se encontro un error en la conexion";
+    echo "Atencion! se encontro un error en la conexion". $e;
     }
 
 ?>
