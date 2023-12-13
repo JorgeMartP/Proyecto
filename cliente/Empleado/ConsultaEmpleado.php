@@ -18,7 +18,7 @@ if (!isset($_SESSION['rol'])) {
     header("Location: ../Usuario/inicioSesion.php");
     exit();
 }else{
-    if($_SESSION['rol'] != 1){
+    if($_SESSION['rol'] != 2){
         header("Location: ../Usuario/inicioSesion.php");
         exit();
     }
@@ -107,7 +107,7 @@ try {
             </div>
         </div>
         <div class="container_Table">
-            <h2>Usuarios registrados</h2>
+            <h2>Empleados registrados</h2>
             <table>
                 <thead>
                     <tr>
@@ -129,7 +129,7 @@ try {
                         <th><?= $row['apellido1'] ?></th>
                         <th><?= $row['correo1'] ?></th>
                         <th><?= $row['telefono1'] ?></th>
-                        <th><a href="ConsultarEmpleado.php?idU=<?= $row['identificacionE'];?>" class="users-table--edit"><i class='bx bx-edit' ></i></a></th>
+                        <th><a href="ConsultarEmpleado.php?idU=<?= $row['identificacionE'];?>" class="users-table--edit"><i class='bx bx-show'></i></a></th>
                     </tr>
                 <?php } ?>
             </tbody>

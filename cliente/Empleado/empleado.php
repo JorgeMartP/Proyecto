@@ -18,7 +18,7 @@ if (!isset($_SESSION['rol'])) {
      header("Location: ../Usuario/inicioSesion.php");
     exit();
 }else{
-    if($_SESSION['rol'] != 2){
+    if($_SESSION['rol'] != 1){
         header("Location: ../Usuario/inicioSesion.php");
         exit();
     }
@@ -46,7 +46,7 @@ if(isset($_GET['buscar'])){
     
 }
 
-$idUs = '1024582197';#$_SESSION['idUsuario'];
+$idUs = $_SESSION['idUsuario'];
 try {
     $sql = "SELECT * FROM usuario WHERE idUsuario = $idUs";
     $res = $conectar->prepare($sql);
@@ -74,7 +74,7 @@ try {
                     </a>
                 </li>
                 <li>
-                    <a href="RegistrarEmpleado.php">
+                    <?php echo '<a href="RegistrarEmpleado.php?empresa=' . $_GET['empresa'].'">';?>
                         <span class="icon"><i class='bx bxs-user'></i></span>
                         <span class="title">Registrar Empleado</span>
                     </a>
@@ -113,7 +113,7 @@ try {
         </div>
         <div class="container_Table">
             <h2>Empleados registrados</h2>
-            <table>
+            <<table>
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -121,25 +121,24 @@ try {
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Correo</th>
-                        <th></th>
+                        <th>Telefono</th>
                         <th></th>
                     </tr>
             </thead>
             <tbody>
                 <?php foreach($result AS $row){ ?>
                     <tr>
-                        <th><?= $row['idUsuario'] ?></th>
+                        <th><?= $row['identificacionE'] ?></th>
                         <th><?= $row['tipoDocumento'] ?></th>
-                        <th><?= $row['nombreU'] ?></th>
-                        <th><?= $row['apellidoU'] ?></th>
-                        <th><?= $row['correoU'] ?></th>
-                        <th><?= $row['nombreTipo'] ?></th>
-                        <th><a href="ConsultarEmpleado.php?idU=<?= $row['idUsuario'];?>" class="users-table--edit"><i class='bx bx-edit' ></i></a></th>
+                        <th><?= $row['nombre1'] ?></th>
+                        <th><?= $row['apellido1'] ?></th>
+                        <th><?= $row['correo1'] ?></th>
+                        <th><?= $row['telefono1'] ?></th>
+                        <th><a href="actualizarEmpleado.php?idU=<?= $row['identificacionE'];?>" class="users-table--edit"><i class='bx bx-show'></i></a></th>
                     </tr>
                 <?php } ?>
             </tbody>
-        </table>
-        
+            </table>    
         </div>
 </body>
 </html>

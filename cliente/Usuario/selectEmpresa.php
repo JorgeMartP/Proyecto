@@ -41,11 +41,11 @@ try {
                 <p><span>Dirección: </span><?=$row['direccionE']?></p>
                 <p><span>Teléfono: </span><?=$row['telefono']?></p>
                 <?php
-                if($_SESSION['rol'] == 1){
+                if($_SESSION['rol'] == 2){
                     echo '<a href="../Empleado/consultaEmpleado.php?empresa=' . $row['nit'] . '">Ingresar</a>';
                     
                 }else{
-                    echo '<a href="../Empleado.php?empresa=' . $row['nit'] . '">Ingresar</a>';
+                    echo '<a href="../Empleado/Empleado.php?empresa=' . $row['nit'] . '">Ingresar</a>';
                 } ?>
             </div>
             <?php

@@ -19,7 +19,7 @@ if (!isset($_SESSION['rol'])) {
     header("Location: ../Usuario/inicioSesion.php");
     exit();
 }else{
-    if($_SESSION['rol'] != 2){
+    if($_SESSION['rol'] != 1){
         header("Location: ../Usuario/inicioSesion.php");
         exit();
     }
@@ -63,6 +63,7 @@ $departamentos = array(
 <?php
 if(isset($_POST['registrar'])){
     $empresa = 	$_GET['empresa'];
+
     $numDocumento = $_POST['numDoc'];
     $tipoDocumento = $_POST['tDocumento'];
     $fechaNacimiento = $_POST['fNacimiento'];
@@ -173,12 +174,11 @@ if(isset($_POST['registrar'])){
                     
                 </li>
                 <li>
-                    <a href="#">
+                    <?php echo '<a href="empleado.php?empresa=' . $_GET['empresa'].'">';?>
                         <span class="icon"><i class='bx bxs-home'></i></span>
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
-                
                 <li>
                     <a href="#">
                         <span class="icon"><i class='bx bx-cog' ></i></span>

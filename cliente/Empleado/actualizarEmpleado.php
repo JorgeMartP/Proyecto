@@ -19,7 +19,7 @@ if (!isset($_SESSION['rol'])) {
     header("Location: ../Usuario/inicioSesion.php");
     exit();
 }else{
-    if($_SESSION['rol'] != 2){
+    if($_SESSION['rol'] != 1){
         header("Location: ../Usuario/inicioSesion.php");
         exit();
     }
