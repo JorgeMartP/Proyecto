@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="http://localhost/proyectoSena/vistas/assets/plugins/SweetAlert/dist/sweetalert2.min.css">
+
 <?php
 $host="localhost";
 $user="root";
@@ -15,4 +15,3 @@ try{
     }
 
 ?>
-<script src="http://localhost/proyectoSena/vistas/assets/plugins/SweetAlert/dist/sweetalert2.all.min.js"></script>

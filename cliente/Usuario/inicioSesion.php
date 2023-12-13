@@ -29,10 +29,10 @@ if (isset($_GET['cerrar_sesion'])) {
 function sesion($sesion){
     switch($sesion){
         case 1:
-            header("Location: /Proyecto/cliente/Empleado/crud_empleado/index_empleado.php");
+            header("Location: selectEmpresa.php");
             break;
         case 2:
-            header("Location: ../Empleado/ConsultaEmpleado.php");
+            header("Location: selectEmpresa.php");
             break;
         case 3:
             header("Location: administrador.php");

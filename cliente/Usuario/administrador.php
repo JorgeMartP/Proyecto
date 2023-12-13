@@ -191,13 +191,13 @@ if(isset($_POST["registrar"])){
                 
                 <li>
                     <a href="#">
-                        <span class="icon"><i class='bx bxs-cog' ></i></span>
+                        <span class="icon"><i class="bi bi-gear-fill"></i></span>
                         <span class="title">Settings</span>
                     </a>
                 </li>
                 <li>
                     <a href="inicioSesion.php?cerrar_sesion=true">
-                        <span class="icon"><i class='bx bx-exit' ></i></span>
+                        <span class="icon"><i class="bi bi-box-arrow-in-right"></i></span>
                         <span class="title">Sign Out</span>
                     </a>
                 </li>

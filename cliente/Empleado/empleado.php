@@ -13,17 +13,17 @@
 <?php
 define('PROYECTO_RUTA', '/xampp/htdocs/Proyecto/');
 include_once PROYECTO_RUTA . 'servidor/conexion.php';
-session_start();
-if (!isset($_SESSION['rol'])) {
-    header("Location: ../Usuario/inicioSesion.php");
-    exit();
-}else{
-    if($_SESSION['rol'] != 1){
-        header("Location: ../Usuario/inicioSesion.php");
-        exit();
-    }
-}
-$empresa = $_GET['empresa'];
+#session_start();
+#if (!isset($_SESSION['rol'])) {
+ #   header("Location: ../Usuario/inicioSesion.php");
+  #  exit();
+#}else{
+#    if($_SESSION['rol'] != 2){
+#        header("Location: ../Usuario/inicioSesion.php");
+#        exit();
+#    }
+#}
+$empresa = "";
 
 if(isset($_GET['buscar'])){
     try{
@@ -46,7 +46,7 @@ if(isset($_GET['buscar'])){
     
 }
 
-$idUs = $_SESSION['idUsuario'];
+$idUs = '1024582197';#$_SESSION['idUsuario'];
 try {
     $sql = "SELECT * FROM usuario WHERE idUsuario = $idUs";
     $res = $conectar->prepare($sql);
@@ -73,7 +73,12 @@ try {
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
-                
+                <li>
+                    <a href="RegistrarEmpleado.php">
+                        <span class="icon"><i class='bx bxs-user'></i></span>
+                        <span class="title">Registrar Empleado</span>
+                    </a>
+                </li>
                 <li>
                     <a href="#">
                         <span class="icon"><i class='bx bxs-cog' ></i></span>
@@ -107,7 +112,7 @@ try {
             </div>
         </div>
         <div class="container_Table">
-            <h2>Usuarios registrados</h2>
+            <h2>Empleados registrados</h2>
             <table>
                 <thead>
                     <tr>
@@ -116,20 +121,20 @@ try {
                         <th>Nombre</th>
                         <th>Apellido</th>
                         <th>Correo</th>
-                        <th>Telefono</th>
+                        <th></th>
                         <th></th>
                     </tr>
             </thead>
             <tbody>
                 <?php foreach($result AS $row){ ?>
                     <tr>
-                        <th><?= $row['identificacionE'] ?></th>
+                        <th><?= $row['idUsuario'] ?></th>
                         <th><?= $row['tipoDocumento'] ?></th>
-                        <th><?= $row['nombre1'] ?></th>
-                        <th><?= $row['apellido1'] ?></th>
-                        <th><?= $row['correo1'] ?></th>
-                        <th><?= $row['telefono1'] ?></th>
-                        <th><a href="ConsultarEmpleado.php?idU=<?= $row['identificacionE'];?>" class="users-table--edit"><i class='bx bx-edit' ></i></a></th>
+                        <th><?= $row['nombreU'] ?></th>
+                        <th><?= $row['apellidoU'] ?></th>
+                        <th><?= $row['correoU'] ?></th>
+                        <th><?= $row['nombreTipo'] ?></th>
+                        <th><a href="ConsultarEmpleado.php?idU=<?= $row['idUsuario'];?>" class="users-table--edit"><i class='bx bx-edit' ></i></a></th>
                     </tr>
                 <?php } ?>
             </tbody>
