@@ -172,7 +172,7 @@ if(isset($_POST['registrar'])){
                     
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="empleado.php">
                         <span class="icon"><i class='bx bxs-home'></i></span>
                         <span class="title">Dashboard</span>
                     </a>

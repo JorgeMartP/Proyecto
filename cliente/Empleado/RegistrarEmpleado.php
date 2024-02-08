@@ -62,7 +62,7 @@ $departamentos = array(
 ?>
 <?php
 if(isset($_POST['registrar'])){
-    $empresa = 	$_GET['empresa'];
+    $empresa = 	$_SESSION['empresa'];
 
     $numDocumento = $_POST['numDoc'];
     $tipoDocumento = $_POST['tDocumento'];
@@ -174,7 +174,7 @@ if(isset($_POST['registrar'])){
                     
                 </li>
                 <li>
-                    <?php echo '<a href="empleado.php?empresa=' . $_GET['empresa'].'">';?>
+                    <?php echo '<a href="empleado.php">';?>
                         <span class="icon"><i class='bx bxs-home'></i></span>
                         <span class="title">Dashboard</span>
                     </a>
@@ -206,7 +206,7 @@ if(isset($_POST['registrar'])){
                 </label>
             </div>
             <div class="user">
-                <img src="../perfil.jpg" alt="perfil">
+                <img src="../assets/img/perfil.jpg" alt="perfil">
             </div>
         </div>
         <br><br>

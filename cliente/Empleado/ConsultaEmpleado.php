@@ -23,7 +23,7 @@ if (!isset($_SESSION['rol'])) {
         exit();
     }
 }
-$empresa = $_GET['empresa'];
+$empresa = $_SESSION['empresa'];
 
 if(isset($_GET['buscar'])){
     try{
@@ -32,7 +32,7 @@ if(isset($_GET['buscar'])){
         $result = $conectar->prepare($sql);
         $result->execute();
     }catch (PDOException $e){
-
+       
     }
     
 }else{
@@ -103,7 +103,7 @@ try {
                 </label>
             </div>
             <div class="user">
-                <img src="../perfil.jpg" alt="perfil">
+                <img src="../assets/img/perfil.jpg" alt="perfil">
             </div>
         </div>
         <div class="container_Table">
@@ -136,5 +136,16 @@ try {
         </table>
         
         </div>
+<script>
+    setTimeout(()=>{
+        window.history.replaceState(null,null,window.location.pathname);
+    },0)
+</script>
+<script src="http://localhost/Proyecto/cliente/assets/js/modal.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/sweet.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/script2.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/script.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/plugins/SweetAlert/dist/sweetalert2.all.min.js"></script>
+
 </body>
 </html>

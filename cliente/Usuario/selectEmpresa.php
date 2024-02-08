@@ -12,7 +12,7 @@
 define('PROYECTO_RUTA', '/xampp/htdocs/Proyecto/');
 include_once PROYECTO_RUTA . 'servidor/conexion.php';
 session_start();
-echo "Rol: " . $_SESSION['rol'];
+
 
 try {
     $sql = "SELECT * FROM empresa;";
@@ -42,10 +42,11 @@ try {
                 <p><span>Teléfono: </span><?=$row['telefono']?></p>
                 <?php
                 if($_SESSION['rol'] == 2){
-                    echo '<a href="../Empleado/consultaEmpleado.php?empresa=' . $row['nit'] . '">Ingresar</a>';
-                    
+                    echo '<a href="../Empleado/consultaEmpleado.php">Ingresar</a>';
+                    $_SESSION['empresa'] = $row['nit'];
                 }else{
-                    echo '<a href="../Empleado/Empleado.php?empresa=' . $row['nit'] . '">Ingresar</a>';
+                    echo '<a href="../Empleado/Empleado.php">Ingresar</a>';
+                    $_SESSION['empresa'] = $row['nit'];
                 } ?>
             </div>
             <?php

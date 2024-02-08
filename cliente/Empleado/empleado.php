@@ -23,7 +23,7 @@ if (!isset($_SESSION['rol'])) {
         exit();
     }
 }
-$empresa = $_GET['empresa'];
+$empresa = $_SESSION['empresa'];
 
 if(isset($_GET['buscar'])){
     try{
@@ -74,7 +74,7 @@ try {
                     </a>
                 </li>
                 <li>
-                    <?php echo '<a href="RegistrarEmpleado.php?empresa=' . $_GET['empresa'].'">';?>
+                    <?php echo '<a href="RegistrarEmpleado.php">';?>
                         <span class="icon"><i class='bx bxs-user'></i></span>
                         <span class="title">Registrar Empleado</span>
                     </a>
@@ -108,12 +108,12 @@ try {
                 </label>
             </div>
             <div class="user">
-                <img src="../perfil.jpg" alt="perfil">
+                <img src="../assets/img/perfil.jpg" alt="perfil">
             </div>
         </div>
         <div class="container_Table">
             <h2>Empleados registrados</h2>
-            <<table>
+            <table>
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -140,5 +140,15 @@ try {
             </tbody>
             </table>    
         </div>
+<script>
+    setTimeout(()=>{
+        window.history.replaceState(null,null,window.location.pathname);
+    },0)
+</script>
+<script src="http://localhost/Proyecto/cliente/assets/js/modal.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/sweet.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/script2.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/js/script.js"></script>
+<script src="http://localhost/Proyecto/cliente/assets/plugins/SweetAlert/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>
